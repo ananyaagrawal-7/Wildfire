@@ -1,0 +1,88 @@
+{
+  "model_name": "WildFire AI - Random Forest Risk Classifier",
+  "algorithm": "RandomForestClassifier",
+  "hyperparameters": {
+    "n_estimators": 150,
+    "max_depth": 12,
+    "min_samples_split": 4,
+    "min_samples_leaf": 2,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "features": [
+    "temperature",
+    "relative_humidity",
+    "wind_speed",
+    "rain",
+    "ffmc",
+    "dmc",
+    "dc",
+    "isi",
+    "bui"
+  ],
+  "feature_importances": {
+    "ffmc": 28.09,
+    "relative_humidity": 14.0,
+    "bui": 12.3,
+    "dmc": 9.31,
+    "temperature": 9.27,
+    "dc": 8.95,
+    "wind_speed": 8.23,
+    "rain": 5.5,
+    "isi": 4.35
+  },
+  "metrics": {
+    "test_accuracy": 0.712,
+    "test_precision": 0.4667,
+    "test_recall": 0.6364,
+    "test_f1_score": 0.5385,
+    "test_roc_auc": 0.7863,
+    "cv_mean_roc_auc": 0.7994,
+    "cv_std_roc_auc": 0.0201,
+    "confusion_matrix": [
+      [
+        272,
+        96
+      ],
+      [
+        48,
+        84
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.85,
+        "recall": 0.7391304347826086,
+        "f1-score": 0.7906976744186046,
+        "support": 368.0
+      },
+      "1": {
+        "precision": 0.4666666666666667,
+        "recall": 0.6363636363636364,
+        "f1-score": 0.5384615384615384,
+        "support": 132.0
+      },
+      "accuracy": 0.712,
+      "macro avg": {
+        "precision": 0.6583333333333333,
+        "recall": 0.6877470355731226,
+        "f1-score": 0.6645796064400715,
+        "support": 500.0
+      },
+      "weighted avg": {
+        "precision": 0.7488,
+        "recall": 0.712,
+        "f1-score": 0.7241073345259392,
+        "support": 500.0
+      }
+    }
+  },
+  "training_samples": 2000,
+  "test_samples": 500,
+  "timestamp": "2026-10-20T22:16:09.873966",
+  "academic_info": {
+    "project": "WildFire AI - Wildfire Risk Prediction & Hotspot Detection",
+    "course": "B.Tech Data Science (2nd Year Capstone)",
+    "benchmark_reference": "Canadian Forest Fire Weather Index (FWI) & Montesinho/Algerian Fire Benchmark"
+  }
+}
